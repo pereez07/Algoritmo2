@@ -1,0 +1,33 @@
+ALGORITMO: PUEDE_VOTAR
+ENTRADAS: edad
+SALIDA: resultado
+    resultado = (edad >= 18) and (edad < 120)
+    DEVOLVER resultado
+
+
+ALGORITMO: CLASIFICAR_NOTA
+ENTRADAS: nota
+SALIDA: calificacion
+    SI nota >= 9:
+        calificacion = "Sobresaliente"
+    SI NO SI nota >= 7:
+        calificacion = "Notable"
+    SI NO SI nota >= 5:
+        calificacion = "Aprobado"
+    SI NO:
+        calificacion = "Suspenso"
+    DEVOLVER calificacion
+
+
+ALGORITMO: CLASIFICAR_IMC
+ENTRADAS: peso, altura
+SALIDA: categoria
+    imc = peso / (altura ** 2)
+    SI imc < 18.5:
+        categoria = "Bajo peso"
+    SI NO:
+        SI imc < 25:
+            categoria = "Normal"
+        SI NO:
+            categoria = "Sobrepeso"
+    DEVOLVER categoria
